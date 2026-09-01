@@ -1,4 +1,171 @@
 <!DOCTYPE html>
-<html body>
-    
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<style>
+  :root {
+    --ink: #1b1f24;
+    --paper: #f7f5f0;
+    --line: #d8d3c8;
+    --accent: #2f6f5e;
+    --muted: #6b6459;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Georgia", "Iowan Old Style", serif;
+    line-height: 1.6;
+  }
+
+  header {
+    border-bottom: 1px solid var(--line);
+    padding: 28px 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  header .brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 24px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+  }
+
+  nav a:hover, nav a:focus-visible {
+    color: var(--accent);
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 6vw 100px;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    margin: 0 0 18px;
+    line-height: 1.15;
+  }
+
+  .lede {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 55ch;
+    margin-bottom: 40px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .actions a {
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    padding: 12px 22px;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+
+  .actions a.primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .actions a:hover, .actions a:focus-visible {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--paper);
+  }
+
+  section.about {
+    margin-top: 90px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+  }
+
+  section.about h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-transform: none;
+    margin: 0 0 14px;
+  }
+
+  footer {
+    padding: 30px 6vw;
+    border-top: 1px solid var(--line);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    main h1, main .lede, main .actions {
+      animation: rise 0.6s ease-out both;
+    }
+    main .lede { animation-delay: 0.08s; }
+    main .actions { animation-delay: 0.16s; }
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Site Name</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1>A quiet place to put your work online.</h1>
+  <p class="lede">
+    This is a starting page you can build on — swap in your own name, project,
+    or product, and reshape the sections below to fit what you're making.
+  </p>
+  <div class="actions">
+    <a href="#work" class="primary">See the work</a>
+    <a href="#contact">Get in touch</a>
+  </div>
+
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>
+      Replace this paragraph with a short description of who this page is for
+      and what visitors should expect to find here.
+    </p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Site Name. Built with plain HTML and CSS.
+</footer>
+
+</body>
 </html>
